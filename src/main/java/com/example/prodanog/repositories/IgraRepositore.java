@@ -128,6 +128,7 @@ public class IgraRepositore {
     }
 
     public ArrayList<Integer> getMoneycol(int id) {
+        System.out.println("select * from \"Igra\" where \"id\"=?");
         Igra igra = jdbcTemplate.queryForObject("select * from \"Igra\" where \"id\"=?", new IgraMapper(), id);
         return igra.getMoneycol();
     }
